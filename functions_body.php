@@ -10,7 +10,7 @@ class body_element
     private int $port = 3306;
     private string $username = "root";
     private string $password = "";
-    private string $dbName = "sj-2023";
+    private string $dbName = "namelix";
 
     private $connection;
 

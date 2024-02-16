@@ -170,7 +170,7 @@
                     <div class="col-lg-8 offset-lg-2">
                         <div class="section-heading">
                             <h6>Prihláste sa na odber noviniek</h6>
-                            <h2>Nenechajte ujsť žiadne novinky!</h2>
+                            <h2>Nenechajte si ujsť žiadne novinky!</h2>
                         </div>
                         <div class="subscribe-content">
                             <p>Ak si želáte dostávať novinky zo sveta marketingu priamo na váš e-mail a vidieť za oponu našej agentúry, prihláste sa k odberu noviniek.</p>
@@ -271,7 +271,7 @@
             <div>
                 <div class>
                     <div class="left-text-content">
-                        <p>Copyright &copy; 2023 Nathaniel Fruni</p>
+                        <p>Copyright &copy; 2023 Nathaniel Fruni - Design: TemplateMo</p>
                     </div>
                 </div>
             </div>
