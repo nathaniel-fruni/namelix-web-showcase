@@ -1,11 +1,12 @@
 <?php
-include_once "../functions_body.php";
-use main\body_element;
+include_once "../../BodyFunctions.php";
 
-$body_elementObj = new body_element();
+use main\BodyFunctions;
+
+$bodyFunctionsObj = new BodyFunctions();
 
 if (isset($_POST['submit'])) {
-    $insert = $body_elementObj->insertBannerItem($_POST['id'],$_POST['popis1'],$_POST['popis2']);
+    $insert = $bodyFunctionsObj->insertBannerItem($_POST['id'],$_POST['popis1'],$_POST['popis2']);
     if ($insert) {
         header('Location: home_banner.php?status=1');
     } else {

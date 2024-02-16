@@ -1,11 +1,11 @@
 <?php
-include_once "../functions_body.php";
+include_once "../../BodyFunctions.php";
 
-use main\body_element;
+use main\BodyFunctions;
 
 if(isset($_POST['submit'])) {
-    $body_elementObj = new body_element();
-    $update = $body_elementObj->updateProject(
+    $bodyFunctionsObj = new BodyFunctions();
+    $update = $bodyFunctionsObj->updateProject(
         $_POST['id'],
         $_POST['partner'],
         $_POST['popis'],

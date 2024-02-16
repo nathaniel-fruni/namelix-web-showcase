@@ -1,9 +1,9 @@
 <?php
-include_once 'functions_body.php';
+include_once 'BodyFunctions.php';
 
-use main\body_element;
-$body_elementObj = new body_element();
-$projects = $body_elementObj->getProjects();
+use main\BodyFunctions;
+$bodyFunctionsObj = new BodyFunctions();
+$projects = $bodyFunctionsObj->getProjects();
 ?>
 
 <section class="section" id="projects">
@@ -27,7 +27,7 @@ $projects = $body_elementObj->getProjects();
                 <div class="filters-content">
                     <div class="row grid">
                         <?php
-                        $body_elementObj->printProjects($projects);
+                        $bodyFunctionsObj->printProjects($projects);
                         ?>>
                     </div>
                 </div>

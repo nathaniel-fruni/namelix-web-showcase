@@ -1,11 +1,12 @@
 <?php
-include_once "../functions_body.php";
-use main\body_element;
+include_once "../../BodyFunctions.php";
 
-$body_elementObj = new body_element();
+use main\BodyFunctions;
+
+$bodyFunctionsObj = new BodyFunctions();
 
 if (isset($_GET['id'])) {
-    $delete = $body_elementObj->deleteBannerItem($_GET['id']);
+    $delete = $bodyFunctionsObj->deleteBannerItem($_GET['id']);
     if ($delete) {
         header('Location: bannerItems.php');
     } else {

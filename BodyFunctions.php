@@ -4,7 +4,7 @@ namespace main;
 
 use \PDO;
 
-class body_element
+class BodyFunctions
 {
     private string $hostname = "localhost";
     private int $port = 3306;

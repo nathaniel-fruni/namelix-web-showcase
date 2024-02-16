@@ -1,10 +1,11 @@
 <?php
-include_once "../functions_body.php";
-use main\body_element;
+include_once "../../BodyFunctions.php";
 
-$body_elementObj = new body_element();
+use main\BodyFunctions;
 
-$projects = $body_elementObj->getProjects();
+$bodyFunctionsObj = new BodyFunctions();
+
+$projects = $bodyFunctionsObj->getProjects();
 
 include_once "html_menu_projects.php";
 

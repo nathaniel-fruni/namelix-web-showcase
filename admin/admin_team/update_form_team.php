@@ -1,11 +1,11 @@
 <?php
-include_once "../functions_body.php";
+include_once "../../BodyFunctions.php";
 
-use main\body_element;
+use main\BodyFunctions;
 
-$body_elementObj = new body_element();
+$bodyFunctionsObj = new BodyFunctions();
 
-$teamItem = $body_elementObj->getTeamMember($_GET['id']);
+$teamItem = $bodyFunctionsObj->getTeamMember($_GET['id']);
 
 include_once "html_menu_team.php";
 ?>

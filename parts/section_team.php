@@ -1,9 +1,9 @@
 <?php
-include_once 'functions_body.php';
+include_once 'BodyFunctions.php';
 
-use main\body_element;
-$body_elementObj = new body_element();
-$teamItems = $body_elementObj->getTeam();
+use main\BodyFunctions;
+$bodyFunctionsObj = new BodyFunctions();
+$teamItems = $bodyFunctionsObj->getTeam();
 ?>
 
 <section class="section" id="testimonials">
@@ -18,7 +18,7 @@ $teamItems = $body_elementObj->getTeam();
             <div class="col-lg-12 col-md-12 col-sm-12 mobile-bottom-fix-big" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                 <div class="owl-carousel owl-theme">
                     <?php
-                    $body_elementObj->printTeam($teamItems);
+                    $bodyFunctionsObj->printTeam($teamItems);
                     ?>
                 </div>
             </div>

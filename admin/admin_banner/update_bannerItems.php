@@ -1,11 +1,11 @@
 <?php
-include_once "../functions_body.php";
+include_once "../../BodyFunctions.php";
 
-use main\body_element;
+use main\BodyFunctions;
 
 if(isset($_POST['submit'])) {
-    $body_elementObj = new body_element();
-    $update = $body_elementObj->updateBannerItem(
+    $bodyFunctionsObj = new BodyFunctions();
+    $update = $bodyFunctionsObj->updateBannerItem(
         $_POST['id'],
         $_POST['popis1'],
         $_POST['popis2'],

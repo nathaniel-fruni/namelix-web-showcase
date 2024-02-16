@@ -1,15 +1,15 @@
 <?php
-include_once 'functions_body.php';
+include_once 'BodyFunctions.php';
 
-use main\body_element;
-$body_elementObj = new body_element();
-$banner = $body_elementObj->getBanner();
+use main\BodyFunctions;
+$bodyFunctionsObj = new BodyFunctions();
+$banner = $bodyFunctionsObj->getBanner();
 ?>
 
 <div class="main-banner header-text" id="top">
     <div class="Modern-Slider">
         <?php
-        $body_elementObj->printBanner($banner);
+        $bodyFunctionsObj->printBanner($banner);
         ?>
     </div>
 </div>

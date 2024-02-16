@@ -1,12 +1,12 @@
 <?php
-include_once "../functions_body.php";
+include_once "../BodyFunctions.php";
 
-use main\body_element;
+use main\BodyFunctions;
 
-$body_elementObj = new body_element();
+$bodyFunctionsObj = new BodyFunctions();
 
 if (isset($_POST['submit'])) {
-    $insert = $body_elementObj->insertMail($_POST['mail']);
+    $insert = $bodyFunctionsObj->insertMail($_POST['mail']);
     if ($insert) {
         header('Location: ../index.php?status=1');
     } else {

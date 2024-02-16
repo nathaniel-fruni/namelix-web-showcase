@@ -1,11 +1,11 @@
 <?php
-include_once "../functions_body.php";
+include_once "../../BodyFunctions.php";
 
-use main\body_element;
+use main\BodyFunctions;
 
-$body_elementObj = new body_element();
+$bodyFunctionsObj = new BodyFunctions();
 
-$bannerItem = $body_elementObj->getBannerItem($_GET['id']);
+$bannerItem = $bodyFunctionsObj->getBannerItem($_GET['id']);
 
 include_once "html_menu_banner.php";
 ?>
