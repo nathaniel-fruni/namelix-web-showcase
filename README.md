@@ -22,7 +22,7 @@
 ## Vlastnosti
 
 - Dynamický generovaný obsah.
-- Admin rozhranie pre úpravu obsahu. (meno:admin@gmail.com heslo:123)
+- Admin rozhranie pre úpravu obsahu. (meno: admin@gmail.com heslo: 123)
 
 ## Zdroj šablóny
 

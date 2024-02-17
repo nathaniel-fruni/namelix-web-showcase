@@ -21,8 +21,6 @@
 
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
-    <link rel="stylesheet" href="assets/css/lightbox.css">
-
 </head>
 
 <body>
@@ -42,6 +40,7 @@
                             <li class="scroll-to-section"><a href="#about">O nás</a></li>
                             <li class="scroll-to-section"><a href="#projects">Projekty</a></li>
                             <li class="scroll-to-section"><a href="#contact-us">Kontakt</a></li>
+                            <li><button onclick="redirectToLogin()" class="main-button">Admin</button></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -291,8 +290,7 @@
     <script src="assets/js/waypoints.min.js"></script>
     <script src="assets/js/jquery.counterup.min.js"></script>
     <script src="assets/js/imgfix.min.js"></script> 
-    <script src="assets/js/slick.js"></script> 
-    <script src="assets/js/lightbox.js"></script> 
+    <script src="assets/js/slick.js"></script>
     <script src="assets/js/isotope.js"></script> 
     
     <!-- Global Init -->
@@ -313,6 +311,10 @@
                 
             });
         });
+
+        function redirectToLogin() {
+            window.location.href = 'admin/login.php';
+        }
 
     </script>
 </body>
