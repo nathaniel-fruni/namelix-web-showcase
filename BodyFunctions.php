@@ -55,9 +55,9 @@ class BodyFunctions
 
         } catch(\Exception $exception) {
             $teamItems = [0=>['id'=>1,'meno'=>'Lukáš','priezvisko'=>'Horváth','pozicia'=>'Digitálny Marketér', 'picture_name' => 'member-item-01.jpg'],
-                          1=>['id'=>2,'meno'=>'Peter','priezvisko'=>'Kováč','pozicia'=>'Analytička', 'picture_name' => 'member-item-02.jpg'],
-                          2=>['id'=>2,'meno'=>'Ján','priezvisko'=>'Varga','pozicia'=>'Digitálny Influencer', 'picture_name' => 'member-item-03.jpg']
-                        ];
+                1=>['id'=>2,'meno'=>'Peter','priezvisko'=>'Kováč','pozicia'=>'Analytička', 'picture_name' => 'member-item-02.jpg'],
+                2=>['id'=>2,'meno'=>'Ján','priezvisko'=>'Varga','pozicia'=>'Digitálny Influencer', 'picture_name' => 'member-item-03.jpg']
+            ];
         }
         return $teamItems;
     }
@@ -72,7 +72,7 @@ class BodyFunctions
                    <h4>'.$item['meno']." ".$item['priezvisko'].'</h4>
                    <span>'.$item['pozicia'].'</span>
                   </div>'
-                ;
+            ;
         }
     }
 

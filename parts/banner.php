@@ -2,6 +2,7 @@
 include_once 'BodyFunctions.php';
 
 use main\BodyFunctions;
+
 $bodyFunctionsObj = new BodyFunctions();
 $banner = $bodyFunctionsObj->getBanner();
 ?>

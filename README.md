@@ -1,33 +1,33 @@
 # Namelix Web Showcase
 
-Welcome to the Namelix Web Showcase!
+## Štruktúra projektu
 
-## Features
-
-This README provides details about the project:
-
-### Project Structure
-
-- `admin/`: Contains the source code for the project.
-    - `admin_banner/`: Admin interface for editing banner section.
-    - `admin_projects/`: Admin interface for editing project section.
-    - `admin_team/`: Admin interface for editing team section.
-    - `admin_home.php`: Home page of admin interface.
+- `admin/` Admin rozhranie.
+    - `admin_banner/`: Admin rozhranie pre úpravu banner sekcie.
+    - `admin_projects/`: Admin rozhranie pre úpravu sekcie projektov.
+    - `admin_team/`: Admin rozhranie pre úpravu tím sekcie.
+    - `auth/`:
+      - `Auth.php`: Trieda pre autorizáciu používateľa.
+      - `auth_check.php`: Kontrola, či je používateľ prihlásený.
+    - `admin_home.php`: Domovská stránka admin rozhrania.
+    - `login.php`: Admin prihlasovacia stránka.
+    - `logout.php`: Odhlásenie používateľa.
 - `assets/`: Static assets.
+- `database/`: Obsahuje súbor pre importovanie databázy.
 - `form_handle/`: Files that handle form submissions.
 - `parts/`: Parts of the webpage with dynamically generated content.
 - `BodyFunctions.php`: Class that handles database connection and CRUD operations.
 - `index.php`
 
-### Key Features
+## Vlastnosti
 
-- Dynamically generated content.
-- Admin interface for editing content.
+- Dynamický generovaný obsah.
+- Admin rozhranie pre úpravu obsahu. (meno:admin@gmail.com heslo:123)
 
-### Template Source
+## Zdroj šablóny
 
-This website was built using a template from [TemplateMo](https://templatemo.com/).
+Tento projekt používa šablónu z [TemplateMo](https://templatemo.com/).
 
-### License
+## Licencia
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+Tento projekt je licencovaný pod MIT licenciou - pre viac informácií si prečítajte súbor [LICENSE](LICENSE.md).

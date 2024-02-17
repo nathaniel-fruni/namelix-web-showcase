@@ -1,7 +1,6 @@
 <?php
-include_once "../BodyFunctions.php";
 
-use main\BodyFunctions;
+include_once "../BodyFunctions.php";
 
 $bodyFunctionsObj = new BodyFunctions();
 
