@@ -19,7 +19,7 @@ if(isset($_GET['status']) && $_GET['status'] == 2) {
 <ul>
     <?php
     foreach ($teamItems as $key=>$TeamItem) {
-        echo "<li>ID: ". $TeamItem['id'] . ", Meno: " . $TeamItem['meno'] . " " .$TeamItem['priezvisko']. "  Pozícia: " .$TeamItem['pozicia'] ." ".
+        echo "<li>Meno: ". $TeamItem['meno'] . " " . $TeamItem['priezvisko'] . " Pozícia:" .$TeamItem['pozicia']. "  Názov fotky: " .$TeamItem['picture_name'] ." ".
             '<a href="delete_team.php?id='.$TeamItem['id'].'">Delete</a> /
              <a href="update_form_team.php?id='.$TeamItem['id'].'">Update</a>
             </li>';

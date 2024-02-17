@@ -19,7 +19,7 @@ if(isset($_GET['status']) && $_GET['status'] == 2) {
 <ul>
     <?php
     foreach ($banner as $key=>$bannerItem) {
-        echo "<li>ID: ". $bannerItem['id'] . "<br> Prvý popis : " . $bannerItem['popis1'] . "<br> Druhý popis : " .$bannerItem['popis2'] ." ".
+        echo "<li>Prvý popis: ". $bannerItem['popis1'] . "<br> Druhý popis: " . $bannerItem['popis2'] . "<br> Názov obrázka: " .$bannerItem['picture_name'] ." ".
             '<a href="delete_bannerItem.php?id='.$bannerItem['id'].'">Delete</a> /
              <a href="update_form_banner.php?id='.$bannerItem['id'].'">Update</a>
             </li>

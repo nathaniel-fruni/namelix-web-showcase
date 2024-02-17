@@ -14,6 +14,8 @@ include_once "html_menu_banner.php";
     <input type="text" name="popis1" placeholder="Prvý popis" value="<?php echo $bannerItem['popis1']; ?>"><br>
     Druhý popis:<br>
     <input type="text" name="popis2" placeholder="Druhý popis" value="<?php echo $bannerItem['popis2']; ?>"><br>
+    Názov obrázka:<br>
+    <input type="text" name="picture_name" placeholder="Názov obrázka" value="<?php echo $bannerItem['picture_name']; ?>"><br>
     <input type="hidden" name="id" value="<?php echo $bannerItem['id']; ?>">
     <input type="submit" name="submit" value="Update">
 </form>

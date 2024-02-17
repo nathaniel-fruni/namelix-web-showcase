@@ -19,7 +19,7 @@ if(isset($_GET['status']) && $_GET['status'] == 2) {
 <ul>
     <?php
     foreach ($projects as $key=>$project) {
-        echo "<li>ID: ". $project['id'] . "<br> Partner: " . $project['partner'] . "<br> Popis: " .$project['popis']. "  <br> Služba: " .$project['sluzba'] ." ".
+        echo "<li>Partner: " . $project['partner'] . "<br> Popis: " .$project['popis']. "  <br> Služba: " .$project['sluzba'] ." ".
             '<a href="delete_projects.php?id='.$project['id'].'">Delete</a> /
              <a href="update_form_projects.php?id='.$project['id'].'">Update</a>
             </li>

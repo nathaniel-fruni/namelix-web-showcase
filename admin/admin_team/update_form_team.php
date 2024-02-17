@@ -16,6 +16,8 @@ include_once "html_menu_team.php";
     <input type="text" name="priezvisko" placeholder="Priezvisko" value="<?php echo $teamItem['priezvisko']; ?>"><br>
     Pozícia:<br>
     <input type="text" name="pozicia" placeholder="Pozícia" value="<?php echo $teamItem['pozicia']; ?>"><br>
+    Názov fotky:<br>
+    <input type="text" name="picture_name" placeholder="Názov fotky" value="<?php echo $teamItem['picture_name']; ?>"><br>
     <input type="hidden" name="id" value="<?php echo $teamItem['id']; ?>">
     <input type="submit" name="submit" value="Update">
 </form>

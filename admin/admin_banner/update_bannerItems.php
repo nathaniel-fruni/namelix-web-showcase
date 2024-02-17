@@ -9,6 +9,7 @@ if(isset($_POST['submit'])) {
         $_POST['id'],
         $_POST['popis1'],
         $_POST['popis2'],
+        $_POST['picture_name']
     );
     if($update) {
         header('Location: bannerItems.php?status=2');

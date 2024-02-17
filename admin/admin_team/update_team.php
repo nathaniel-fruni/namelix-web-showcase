@@ -9,7 +9,8 @@ if(isset($_POST['submit'])) {
         $_POST['id'],
         $_POST['meno'],
         $_POST['priezvisko'],
-        $_POST['pozicia']
+        $_POST['pozicia'],
+        $_POST['picture_name']
     );
     if($update) {
         header('Location: teamlist.php?status=2');

@@ -54,9 +54,9 @@ class BodyFunctions
             $teamItems = $query->fetchAll(PDO::FETCH_ASSOC);
 
         } catch(\Exception $exception) {
-            $teamItems = [0=>['id'=>1,'meno'=>'Lukáš','priezvisko'=>'Horváth','pozicia'=>'Digitálny Marketér'],
-                          1=>['id'=>2,'meno'=>'Mária','priezvisko'=>'Kováčová','pozicia'=>'Analytička'],
-                          2=>['id'=>2,'meno'=>'Ján','priezvisko'=>'Varga','pozicia'=>'Digitálny Influencer']
+            $teamItems = [0=>['id'=>1,'meno'=>'Lukáš','priezvisko'=>'Horváth','pozicia'=>'Digitálny Marketér', 'picture_name' => 'member-item-01.jpg'],
+                          1=>['id'=>2,'meno'=>'Peter','priezvisko'=>'Kováč','pozicia'=>'Analytička', 'picture_name' => 'member-item-02.jpg'],
+                          2=>['id'=>2,'meno'=>'Ján','priezvisko'=>'Varga','pozicia'=>'Digitálny Influencer', 'picture_name' => 'member-item-03.jpg']
                         ];
         }
         return $teamItems;
@@ -67,7 +67,7 @@ class BodyFunctions
         foreach($teamItems as $key => $item){
             echo '<div class="item author-item">
                    <div class="member-thumb">
-                    <img class="img-thumbnail" src="assets/images/member-item-0'.$item['id'].'.jpg" alt="">
+                    <img class="img-thumbnail" src="assets/images/'.$item['picture_name'].'" alt="">
                    </div>
                    <h4>'.$item['meno']." ".$item['priezvisko'].'</h4>
                    <span>'.$item['pozicia'].'</span>
@@ -76,10 +76,10 @@ class BodyFunctions
         }
     }
 
-    public function insertTeamMember(int $id,string $meno, string $priezvisko, string $pozicia) : bool
+    public function insertTeamMember(string $meno, string $priezvisko, string $pozicia, string $picture_name) : bool
     {
         $insert = false;
-        $sql = "INSERT INTO team(id,meno,priezvisko,pozicia) VALUES ('".$id."','".$meno."','".$priezvisko."','".$pozicia."')";
+        $sql = "INSERT INTO team(meno, priezvisko, pozicia, picture_name) VALUES ('".$meno."','".$priezvisko."','".$pozicia."', '".$picture_name."')";
 
         try {
             $statement = $this->connection->prepare($sql);
@@ -120,15 +120,16 @@ class BodyFunctions
         return $data;
     }
 
-    public function updateTeamMember(int $id, string $meno, string $priezvisko, string $pozicia): bool
+    public function updateTeamMember(int $id, string $meno, string $priezvisko, string $pozicia, string $picture_name): bool
     {
         try {
-            $sql = "UPDATE team SET meno = :meno, priezvisko = :priezvisko, pozicia = :pozicia WHERE id = :id";
+            $sql = "UPDATE team SET meno = :meno, priezvisko = :priezvisko, pozicia = :pozicia, picture_name = :picture_name WHERE id = :id";
             $statement = $this->connection->prepare($sql);
             $update = $statement->execute([
                 'meno' => $meno,
                 'priezvisko' => $priezvisko,
                 'pozicia' => $pozicia,
+                'picture_name' => $picture_name,
                 'id' => $id,
             ]);
         } catch (\Exception $exception) {
@@ -239,8 +240,8 @@ class BodyFunctions
             $banner = $query->fetchAll(PDO::FETCH_ASSOC);
 
         } catch(\Exception $exception) {
-            $banner = [0=>['id'=>1,'popis1'=>'Vitajte na našej stránke','popis2'=>'Efektívny digitálny marketing'],
-                1=>['id'=>2,'popis1'=>'Komplexný a analytický','popis2'=>'Najlepší Digitálny Marketing']
+            $banner = [0=>['id'=>1,'popis1'=>'Vitajte na našej stránke','popis2'=>'Efektívny digitálny marketing', 'picture_name' => 'slide-01.jpg'],
+                1=>['id'=>2,'popis1'=>'Komplexný a analytický','popis2'=>'Najlepší Digitálny Marketing', 'picture_name' => 'slide-02.jpg']
             ];
         }
         return $banner;
@@ -251,7 +252,7 @@ class BodyFunctions
         foreach($banner as $key => $item){
             echo '<div class="item">
             <div class="img-fill">
-                <img src="assets/images/slide-0'.$item['id'].'.jpg" alt="">
+                <img src="assets/images/'.$item['picture_name'].'" alt="background-slide">
                 <div class="text-content">
                     <h3>'.$item['popis1'].'</h3>
                     <h5>'.$item['popis2'].'</h5>
@@ -264,10 +265,10 @@ class BodyFunctions
         }
     }
 
-    public function insertBannerItem(int $id, string $popis1, string $popis2) : bool
+    public function insertBannerItem(string $popis1, string $popis2, string $picture_name) : bool
     {
         $insert = false;
-        $sql = "INSERT INTO banner(id,popis1,popis2) VALUES ('".$id."','".$popis1."','".$popis2."')";
+        $sql = "INSERT INTO banner(popis1, popis2, picture_name) VALUES ('".$popis1."','".$popis2."', '".$picture_name."')";
 
         try {
             $statement = $this->connection->prepare($sql);
@@ -308,14 +309,15 @@ class BodyFunctions
         return $data;
     }
 
-    public function updateBannerItem(int $id, string $popis1, string $popis2): bool
+    public function updateBannerItem(int $id, string $popis1, string $popis2, string $picture_name): bool
     {
         try {
-            $sql = "UPDATE banner SET popis1 = :popis1, popis2 = :popis2 WHERE id = :id";
+            $sql = "UPDATE banner SET popis1 = :popis1, popis2 = :popis2, picture_name = :picture_name WHERE id = :id";
             $statement = $this->connection->prepare($sql);
             $update = $statement->execute([
                 'popis1' => $popis1,
                 'popis2' => $popis2,
+                'picture_name' => $picture_name,
                 'id' => $id,
             ]);
         } catch (\Exception $exception) {
