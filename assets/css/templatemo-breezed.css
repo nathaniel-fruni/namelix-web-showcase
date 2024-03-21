@@ -21,6 +21,7 @@ Table of contents
 10. preloader
 11. search
 12. portfolio
+13. admin
 
 --------------------------------------------- */
 /* 
@@ -1670,3 +1671,78 @@ portfolio
     margin-bottom: 0px;
   }
 }
+
+/*
+---------------------------------------------
+admin
+---------------------------------------------
+*/
+
+.admin-body {
+  background-image: url('../images/slide-01.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.buttons-container-admin {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.edit-btn-admin {
+  margin: 5em;
+}
+@media only screen and (max-width: 768px) {
+  .buttons-container-admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#testimonials-admin {
+  margin-top: 50px;
+}
+#testimonials-admin .section-heading {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+#testimonials-admin .item {
+  position: relative;
+  text-align: center;
+}
+
+#testimonials-admin .item h4 {
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-top: 22px;
+  margin-bottom: 7px;
+}
+
+
+#testimonials-admin .item span {
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#testimonials-admin .owl-carousel {
+  padding-bottom: 60px;
+}
+
+
+
