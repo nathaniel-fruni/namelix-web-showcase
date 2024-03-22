@@ -1,3 +1,7 @@
+<?php
+include_once "auth/auth_check.php";
+?>
+
 <!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -9,10 +13,6 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 </head>
 <body class="admin-body">
-
-<?php
-include_once "auth/auth_check.php";
-?>
 
 <header class="header-area header-sticky">
     <div class="container">

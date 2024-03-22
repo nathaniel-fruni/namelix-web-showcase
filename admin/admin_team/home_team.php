@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
                         <li><a href="../admin_projects/home_projects.php">Projekty</a></li>
                         <li><a href="home_team.php">Tím</a></li>
                         <li><a href="../admin_banner/home_banner.php">Banner</a></li>
-                        <li><a href="../logout.php">Logout</a></li>
+                        <li><a href="../logout.php">Odhlásiť sa</a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
